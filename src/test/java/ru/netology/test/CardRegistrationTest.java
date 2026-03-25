@@ -35,7 +35,7 @@ class CardRegistrationTest {
         $("[data-test-id='agreement']").click();
 
         $$("button").find(exactText("Забронировать")).click();
-        
+
         $("[data-test-id='notification']")
                 .shouldBe(visible, Duration.ofSeconds(15))
                 .shouldHave(text("Встреча успешно забронирована на " + planningDate));
